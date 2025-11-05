@@ -1,6 +1,7 @@
 AuthType Basic
 AuthName "Quiz System Admin Area"
-AuthUserFile /home/user/macprojects/quiz-system/admin/.htpasswd
+# NOTE: Run setup-admin.php to generate .htpasswd and update this path
+AuthUserFile __HTPASSWD_PATH__
 Require valid-user
 
 # Prevent directory listing
