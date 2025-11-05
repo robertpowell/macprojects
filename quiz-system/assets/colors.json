@@ -1,0 +1,22 @@
+[
+  {"name": "Crimson", "hex": "#DC143C", "text": "#FFFFFF"},
+  {"name": "Coral", "hex": "#FF6B6B", "text": "#000000"},
+  {"name": "Orange", "hex": "#FF8C42", "text": "#000000"},
+  {"name": "Gold", "hex": "#FFD700", "text": "#000000"},
+  {"name": "Lime", "hex": "#32CD32", "text": "#000000"},
+  {"name": "Emerald", "hex": "#50C878", "text": "#000000"},
+  {"name": "Turquoise", "hex": "#40E0D0", "text": "#000000"},
+  {"name": "Sky", "hex": "#00BFFF", "text": "#000000"},
+  {"name": "Royal", "hex": "#4169E1", "text": "#FFFFFF"},
+  {"name": "Violet", "hex": "#8A2BE2", "text": "#FFFFFF"},
+  {"name": "Magenta", "hex": "#FF00FF", "text": "#000000"},
+  {"name": "Pink", "hex": "#FF69B4", "text": "#000000"},
+  {"name": "Rose", "hex": "#FF007F", "text": "#FFFFFF"},
+  {"name": "Amber", "hex": "#FFBF00", "text": "#000000"},
+  {"name": "Mint", "hex": "#98FF98", "text": "#000000"},
+  {"name": "Lavender", "hex": "#B19CD9", "text": "#000000"},
+  {"name": "Peach", "hex": "#FFCBA4", "text": "#000000"},
+  {"name": "Teal", "hex": "#008080", "text": "#FFFFFF"},
+  {"name": "Indigo", "hex": "#4B0082", "text": "#FFFFFF"},
+  {"name": "Burgundy", "hex": "#800020", "text": "#FFFFFF"}
+]

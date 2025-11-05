@@ -1,0 +1,102 @@
+[
+  {
+    "question_text": "What is the capital of France?",
+    "option_a": "London",
+    "option_b": "Paris",
+    "option_c": "Berlin",
+    "option_d": "Madrid",
+    "correct_answer": "B",
+    "explanation": "Paris is the capital and largest city of France",
+    "difficulty": "easy"
+  },
+  {
+    "question_text": "What is 15 + 27?",
+    "option_a": "40",
+    "option_b": "41",
+    "option_c": "42",
+    "option_d": "43",
+    "correct_answer": "C",
+    "explanation": "15 + 27 = 42",
+    "difficulty": "easy"
+  },
+  {
+    "question_text": "Which programming language is known as the 'language of the web'?",
+    "option_a": "Python",
+    "option_b": "Java",
+    "option_c": "JavaScript",
+    "option_d": "C++",
+    "correct_answer": "C",
+    "explanation": "JavaScript is the primary programming language for web browsers",
+    "difficulty": "medium"
+  },
+  {
+    "question_text": "What does HTML stand for?",
+    "option_a": "Hyper Text Markup Language",
+    "option_b": "High Tech Modern Language",
+    "option_c": "Home Tool Markup Language",
+    "option_d": "Hyperlinks and Text Markup Language",
+    "correct_answer": "A",
+    "explanation": "HTML stands for Hyper Text Markup Language",
+    "difficulty": "easy"
+  },
+  {
+    "question_text": "In what year was the first iPhone released?",
+    "option_a": "2005",
+    "option_b": "2006",
+    "option_c": "2007",
+    "option_d": "2008",
+    "correct_answer": "C",
+    "explanation": "The first iPhone was released by Apple in 2007",
+    "difficulty": "medium"
+  },
+  {
+    "question_text": "What is the main component of the Sun?",
+    "option_a": "Helium",
+    "option_b": "Hydrogen",
+    "option_c": "Oxygen",
+    "option_d": "Carbon",
+    "correct_answer": "B",
+    "explanation": "The Sun is composed primarily of hydrogen (about 73%)",
+    "difficulty": "medium"
+  },
+  {
+    "question_text": "How many hours are in a week?",
+    "option_a": "156",
+    "option_b": "168",
+    "option_c": "178",
+    "option_d": "184",
+    "correct_answer": "B",
+    "explanation": "There are 168 hours in a week (7 days × 24 hours)",
+    "difficulty": "easy"
+  },
+  {
+    "question_text": "What is the smallest country in the world?",
+    "option_a": "Monaco",
+    "option_b": "Vatican City",
+    "option_c": "San Marino",
+    "option_d": "Liechtenstein",
+    "correct_answer": "B",
+    "explanation": "Vatican City is the smallest country with an area of about 0.44 km²",
+    "difficulty": "medium"
+  },
+  {
+    "question_text": "What does CPU stand for?",
+    "option_a": "Central Processing Unit",
+    "option_b": "Computer Personal Unit",
+    "option_c": "Central Processor Utility",
+    "option_d": "Core Processing Unit",
+    "correct_answer": "A",
+    "explanation": "CPU stands for Central Processing Unit, the brain of a computer",
+    "difficulty": "easy"
+  },
+  {
+    "question_text": "Which planet is closest to the Sun?",
+    "option_a": "Venus",
+    "option_b": "Earth",
+    "option_c": "Mercury",
+    "option_d": "Mars",
+    "correct_answer": "C",
+    "explanation": "Mercury is the closest planet to the Sun",
+    "difficulty": "easy"
+  }
+]
