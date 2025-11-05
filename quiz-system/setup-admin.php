@@ -77,6 +77,14 @@ if (file_put_contents($htpasswdPath, $htpasswdContent) !== false) {
     echo "\n✓ Admin credentials created successfully!\n";
     echo "  File: $htpasswdPath\n";
     echo "  Username: $username\n";
+
+    // Update .htaccess with correct path
+    $htaccessPath = __DIR__ . '/admin/.htaccess';
+    $htaccessContent = file_get_contents($htaccessPath);
+    $htaccessContent = str_replace('__HTPASSWD_PATH__', $htpasswdPath, $htaccessContent);
+    file_put_contents($htaccessPath, $htaccessContent);
+    echo "✓ Updated .htaccess with correct path\n";
+
     echo "\nYou can now access the admin panel at /admin/\n";
 } else {
     die("\n✗ Error: Could not create .htpasswd file\n");
