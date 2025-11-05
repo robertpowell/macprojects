@@ -7,6 +7,33 @@
 
 echo "=== Quiz System Admin Setup ===\n\n";
 
+// Check requirements first
+echo "Checking system requirements...\n";
+
+if (!extension_loaded('pdo')) {
+    die("Error: PDO extension is not installed.\n" .
+        "Install it with: sudo apt-get install php-pdo\n\n");
+}
+
+if (!extension_loaded('pdo_sqlite') && !extension_loaded('pdo_mysql')) {
+    die("Error: Neither PDO SQLite nor PDO MySQL is installed.\n\n" .
+        "To install SQLite:\n" .
+        "  Ubuntu/Debian: sudo apt-get install php-sqlite3\n" .
+        "  CentOS/RHEL: sudo yum install php-pdo\n\n" .
+        "Or use MySQL:\n" .
+        "  1. Install: sudo apt-get install mysql-server php-mysql\n" .
+        "  2. Run: php setup-mysql.php\n\n");
+}
+
+if (!extension_loaded('pdo_sqlite')) {
+    echo "⚠️  Warning: SQLite not available, but MySQL is.\n";
+    echo "   Run 'php setup-mysql.php' to configure MySQL instead.\n";
+    echo "   Or install SQLite with: sudo apt-get install php-sqlite3\n\n";
+    exit(1);
+}
+
+echo "✓ Requirements check passed\n\n";
+
 // Get username
 echo "Enter admin username: ";
 $username = trim(fgets(STDIN));

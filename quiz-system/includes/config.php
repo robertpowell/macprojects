@@ -23,27 +23,31 @@ date_default_timezone_set('UTC');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Session configuration
-ini_set('session.cookie_httponly', 1);
-ini_set('session.use_strict_mode', 1);
+// Session configuration (only for web requests, not CLI)
+if (php_sapi_name() !== 'cli') {
+    ini_set('session.cookie_httponly', 1);
+    ini_set('session.use_strict_mode', 1);
 
-// CSRF Protection
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+    // CSRF Protection
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
 
-if (!isset($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    if (!isset($_SESSION['csrf_token'])) {
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    }
 }
 
 // Helper function to verify CSRF token
 function verify_csrf_token($token) {
+    if (php_sapi_name() === 'cli') return true;
     return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
 }
 
 // Helper function to get CSRF token
 function get_csrf_token() {
-    return $_SESSION['csrf_token'];
+    if (php_sapi_name() === 'cli') return '';
+    return $_SESSION['csrf_token'] ?? '';
 }
 
 // Logging function
