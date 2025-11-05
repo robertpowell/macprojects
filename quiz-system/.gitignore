@@ -1,0 +1,60 @@
+# Database files
+data/*.sqlite
+data/*.db
+*.sqlite
+*.db
+
+# Logs
+logs/*.log
+*.log
+
+# Admin credentials
+admin/.htpasswd
+
+# Uploaded files
+data/quizzes/*
+!data/quizzes/.gitkeep
+
+# Generated QR codes
+assets/qrcodes/*
+!assets/qrcodes/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# PHP
+vendor/
+composer.lock
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Backup files
+*.bak
+*.backup
+backup/
+
+# Session files
+sessions/
+
+# Environment files
+.env
+.env.local
+
+# Error logs
+php-errors.log
+error.log
