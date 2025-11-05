@@ -12,7 +12,7 @@ header('Access-Control-Allow-Origin: *');
 // API Configuration
 // IMPORTANT: Replace 'YOUR_API_KEY_HERE' with your actual WeatherAPI.com API key
 // Get your free API key from: https://www.weatherapi.com/signup.aspx
-$API_KEY = 'YOUR_API_KEY_HERE';
+$API_KEY = '49a50884034b40a1a98111032250511';
 $API_BASE_URL = 'http://api.weatherapi.com/v1';
 
 // Get location from query parameter
