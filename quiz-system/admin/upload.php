@@ -46,11 +46,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['quiz_file'])) {
                 }
 
                 // Validate questions
-                foreach ($questions as $q) {
-                    if (empty($q['question_text']) || empty($q['option_a']) ||
-                        empty($q['option_b']) || empty($q['option_c']) ||
-                        empty($q['option_d']) || empty($q['correct_answer'])) {
-                        throw new Exception('Invalid question format');
+                foreach ($questions as $index => $q) {
+                    $missingFields = [];
+                    if (empty($q['question_text'])) $missingFields[] = 'question_text';
+                    if (empty($q['option_a'])) $missingFields[] = 'option_a';
+                    if (empty($q['option_b'])) $missingFields[] = 'option_b';
+                    if (empty($q['option_c'])) $missingFields[] = 'option_c';
+                    if (empty($q['option_d'])) $missingFields[] = 'option_d';
+                    if (empty($q['correct_answer'])) $missingFields[] = 'correct_answer';
+
+                    if (!empty($missingFields)) {
+                        throw new Exception('Invalid question format at row ' . ($index + 2) . ': Missing fields: ' . implode(', ', $missingFields));
                     }
                 }
 
