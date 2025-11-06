@@ -48,12 +48,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['quiz_file'])) {
                 // Validate questions
                 foreach ($questions as $index => $q) {
                     $missingFields = [];
-                    if (empty($q['question_text'])) $missingFields[] = 'question_text';
-                    if (empty($q['option_a'])) $missingFields[] = 'option_a';
-                    if (empty($q['option_b'])) $missingFields[] = 'option_b';
-                    if (empty($q['option_c'])) $missingFields[] = 'option_c';
-                    if (empty($q['option_d'])) $missingFields[] = 'option_d';
-                    if (empty($q['correct_answer'])) $missingFields[] = 'correct_answer';
+                    // Use !isset() || trim() === '' instead of empty() to handle "0" values correctly
+                    if (!isset($q['question_text']) || trim($q['question_text']) === '') $missingFields[] = 'question_text';
+                    if (!isset($q['option_a']) || trim($q['option_a']) === '') $missingFields[] = 'option_a';
+                    if (!isset($q['option_b']) || trim($q['option_b']) === '') $missingFields[] = 'option_b';
+                    if (!isset($q['option_c']) || trim($q['option_c']) === '') $missingFields[] = 'option_c';
+                    if (!isset($q['option_d']) || trim($q['option_d']) === '') $missingFields[] = 'option_d';
+                    if (!isset($q['correct_answer']) || trim($q['correct_answer']) === '') $missingFields[] = 'correct_answer';
 
                     if (!empty($missingFields)) {
                         throw new Exception('Invalid question format at row ' . ($index + 2) . ': Missing fields: ' . implode(', ', $missingFields));
