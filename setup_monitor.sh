@@ -3,17 +3,27 @@
 
 echo "Setting up price monitor..."
 
+# Check if p3env exists, create if not
+if [ ! -d "p3env" ]; then
+    echo "Creating virtual environment p3env..."
+    python3 -m venv p3env
+fi
+
+# Activate virtual environment
+echo "Activating virtual environment..."
+source p3env/bin/activate
+
 # Make the script executable
 chmod +x price_monitor.py
 
 # Install Python dependencies
 echo "Installing dependencies..."
-pip3 install -r requirements_monitor.txt
+pip install -r requirements_monitor.txt
 
 # Test the script
 echo ""
 echo "Testing the price monitor..."
-python3 price_monitor.py
+python price_monitor.py
 
 echo ""
 echo "Setup complete!"
